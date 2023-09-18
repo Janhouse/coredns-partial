@@ -307,7 +307,6 @@ func (a Apex) ns(do bool) []dns.RR {
 
 // externalLookup adds signatures and tries to resolve CNAMEs that point to external names.
 func (z *Zone) externalLookup(ctx context.Context, state request.Request, elem *tree.Elem, rrs []dns.RR) ([]dns.RR, []dns.RR, []dns.RR, Result) {
-
 	qtype := state.QType()
 	do := state.Do()
 
@@ -353,7 +352,7 @@ Redo:
 		goto Redo
 	}
 
-	targets := rrutil.CNAMEForType(elem.All(), qtype)
+	targets := elem.Type(qtype)
 	if len(targets) > 0 {
 		rrs = append(rrs, targets...)
 
