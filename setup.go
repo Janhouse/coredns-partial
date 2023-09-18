@@ -13,7 +13,7 @@ import (
 	"github.com/coredns/coredns/plugin/transfer"
 )
 
-func init() { plugin.Register("file", setup) }
+func init() { plugin.Register("partial", setup) }
 
 func setup(c *caddy.Controller) error {
 	zones, err := fileParse(c)
