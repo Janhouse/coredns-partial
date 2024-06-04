@@ -1,4 +1,4 @@
-module github.com/janhouse/coredns-partial
+module github.com/Janhouse/coredns-partial
 
 go 1.20
 
