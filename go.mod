@@ -1,4 +1,4 @@
-module github.com/lrascao/coredns-partial
+module github.com/janhouse/coredns-partial
 
 go 1.20
 
